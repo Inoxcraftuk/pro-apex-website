@@ -10,15 +10,8 @@
 
 <style>
 :root{
-  --ink:#101820;
-  --text:#2a343c;
-  --muted:#6b767e;
-  --line:#e4e3de;
-  --bg:#ffffff;
-  --soft:#f6f5f1;
-  --gold:#b8872f;
-  --gold-light:#e2bd70;
-  --max:1100px;
+  --ink:#101820;--text:#2a343c;--muted:#6b767e;--line:#e4e3de;--bg:#fff;--soft:#f6f5f1;
+  --gold:#b8872f;--gold-light:#e2bd70;--max:1100px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -31,20 +24,21 @@ h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--ink);line-heigh
 a{color:inherit}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
-section{padding:64px 0}
+section{padding:56px 0;scroll-margin-top:70px}
 .soft{background:var(--soft)}
 .center{text-align:center}
 .lead{color:var(--muted);font-size:1.05rem;max-width:620px}
 .center .lead{margin-left:auto;margin-right:auto}
 h2{font-size:clamp(1.7rem,6vw,2.6rem);margin-bottom:14px}
-.kicker{color:var(--gold);font-size:.85rem;font-weight:700;margin-bottom:10px;letter-spacing:.04em}
+h2:after{content:"";display:block;width:48px;height:3px;background:var(--gold);margin-top:12px;border-radius:2px}
+.center h2:after{margin-left:auto;margin-right:auto}
 
 /* Buttons */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
   padding:15px 26px;border-radius:6px;font-weight:700;font-size:1rem;
   text-decoration:none;border:2px solid transparent;cursor:pointer;
-  font-family:inherit;transition:background .2s,color .2s;min-height:50px;
+  font-family:inherit;min-height:50px;
 }
 .btn-gold{background:var(--gold);color:#fff}
 .btn-gold:hover{background:#9d7226}
@@ -52,41 +46,36 @@ h2{font-size:clamp(1.7rem,6vw,2.6rem);margin-bottom:14px}
 .btn-outline:hover{background:#fff;color:var(--ink)}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-dark:hover{background:#1d2b38}
-.btn-line{border-color:var(--ink);color:var(--ink)}
-.btn-line:hover{background:var(--ink);color:#fff}
 
 /* Header */
 header.site{
   position:sticky;top:0;z-index:60;background:#fff;
-  border-bottom:1px solid var(--line);
-  padding-top:env(safe-area-inset-top);
+  border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top);
 }
-.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1.3rem Georgia,serif;color:var(--ink)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;align-content:flex-start}
+.brand{display:flex;align-items:center;gap:10px;height:64px;text-decoration:none;font:700 1.3rem Georgia,serif;color:var(--ink)}
 .brand svg{width:34px;height:34px}
 .menu-btn{
-  background:none;border:0;width:44px;height:44px;cursor:pointer;
+  background:none;border:0;width:48px;height:64px;cursor:pointer;
   display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;
 }
 .menu-btn span{width:24px;height:2px;background:var(--ink);transition:.25s}
 .menu-btn.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .menu-btn.open span:nth-child(2){opacity:0}
 .menu-btn.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
-.nav{
-  display:none;flex-direction:column;background:#fff;
-  border-top:1px solid var(--line);padding:8px 22px 20px;
-}
+.nav{display:none;flex:1 0 100%;flex-direction:column;border-top:1px solid var(--line);padding:6px 0 18px}
 .nav.open{display:flex}
-.nav a{padding:15px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600;color:var(--ink)}
+.nav a{padding:16px 0;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600;color:var(--ink)}
 .nav a.btn{margin-top:16px;border:0;color:#fff;text-align:center}
+@media(max-width:899px){
+  .nav.open{max-height:calc(100vh - 64px - env(safe-area-inset-top));overflow-y:auto}
+}
 @media(min-width:900px){
   .menu-btn{display:none}
-  .nav,.nav.open{display:flex;flex-direction:row;align-items:center;gap:28px;border:0;padding:0}
+  .bar{flex-wrap:nowrap;gap:30px}
+  .nav,.nav.open{display:flex;flex:0 1 auto;flex-direction:row;align-items:center;gap:28px;border:0;padding:0}
   .nav a{border:0;padding:0;font-size:.95rem}
   .nav a.btn{margin:0;padding:11px 20px;min-height:0}
-  header.site .wrap{position:relative}
-  .bar{gap:30px}
-  .nav-holder{display:flex}
 }
 
 /* Hero */
@@ -95,59 +84,42 @@ header.site{
     linear-gradient(180deg,rgba(16,24,32,.55),rgba(16,24,32,.88)),
     url("images/hero-door.jpg") center/cover no-repeat,
     linear-gradient(135deg,#1d2b38,#101820);
-  color:#fff;padding:84px 0 72px;
+  color:#fff;padding:52px 0 44px;
 }
 .hero h1{color:#fff;font-size:clamp(2.1rem,8vw,3.8rem);margin-bottom:18px;max-width:720px}
-.hero p{color:#dfe4e8;font-size:1.08rem;max-width:560px;margin-bottom:28px}
+.hero p{color:#dfe4e8;font-size:1.05rem;max-width:560px;margin-bottom:26px}
 .hero .btns{display:flex;flex-direction:column;gap:12px;max-width:340px}
-.partner-note{margin-top:30px;font-size:.9rem;color:#c3cbd1;border-top:1px solid rgba(255,255,255,.2);padding-top:18px;max-width:520px}
+.hero .partner-note{margin:28px 0 0;font-size:.9rem;color:#c3cbd1;border-top:1px solid rgba(255,255,255,.2);padding-top:18px;max-width:520px}
 @media(min-width:600px){.hero .btns{flex-direction:row;max-width:none}}
+@media(min-width:900px){.hero{padding:84px 0 72px}}
 
-/* Feature row */
-.features{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.feat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px 16px;text-align:center}
-.feat svg{width:34px;height:34px;margin:0 auto 12px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+/* Features */
+.features{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.feat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 12px;text-align:center}
+.feat svg{width:34px;height:34px;margin:0 auto 10px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .feat h3{font-family:inherit;font-size:1rem;margin-bottom:4px}
 .feat p{font-size:.85rem;color:var(--muted);line-height:1.5}
 @media(min-width:800px){.features{grid-template-columns:repeat(4,1fr)}}
 
-/* Product list */
-.products{display:grid;gap:18px;margin-top:34px}
+/* Products: ONE column on phones, stacked top to bottom (no sideways swipe) */
+.products{display:grid;grid-template-columns:1fr;gap:18px;margin-top:30px}
 .product{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
 .product .img{
-  aspect-ratio:4/3;
+  position:relative;aspect-ratio:16/10;overflow:hidden;
   background:linear-gradient(135deg,#e9e7e0,#d8d5cb);
-  background-size:cover;background-position:center;
   display:flex;align-items:center;justify-content:center;color:#9b978b;font-size:.85rem;
 }
-.product .body{padding:22px}
-.product h3{font-size:1.3rem;margin-bottom:6px}
+.product .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.product .body{padding:18px 20px 20px}
+.product h3{font-size:1.25rem;margin-bottom:6px}
 .product p{color:var(--muted);font-size:.95rem}
-.product a.more{display:inline-block;margin-top:12px;font-weight:700;color:var(--gold);text-decoration:none}
-@media(min-width:700px){.products{grid-template-columns:repeat(3,1fr)}}
-
-/* Colours */
-.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px;margin:28px 0 8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.tabs::-webkit-scrollbar{display:none}
-.tab{
-  flex:0 0 auto;padding:10px 18px;border-radius:999px;border:1px solid var(--line);
-  background:#fff;font:600 .9rem inherit;font-family:inherit;color:var(--ink);cursor:pointer;
-}
-.tab.active{background:var(--ink);border-color:var(--ink);color:#fff}
-.swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 10px}
-.sw{text-align:center}
-.sw i{
-  display:block;width:100%;max-width:84px;aspect-ratio:1;border-radius:50%;
-  margin:0 auto 8px;border:1px solid rgba(0,0,0,.12);
-  box-shadow:inset 0 0 0 3px rgba(255,255,255,.35);
-}
-.sw span{font-size:.82rem;font-weight:600;color:var(--ink)}
-@media(min-width:700px){.swatches{grid-template-columns:repeat(6,1fr)}}
-.small-note{margin-top:22px;font-size:.85rem;color:var(--muted)}
+.product a.more{display:inline-block;margin-top:10px;padding:6px 0;font-weight:700;color:var(--gold);text-decoration:none}
+@media(min-width:640px){.products{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.products{grid-template-columns:repeat(3,1fr)}}
 
 /* Steps */
-.steps{display:grid;gap:14px;margin-top:32px;counter-reset:s}
-.step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px}
+.steps{display:grid;gap:12px;margin-top:30px;counter-reset:s}
+.step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px}
 .step:before{
   counter-increment:s;content:counter(s);flex:0 0 36px;height:36px;border-radius:50%;
   background:var(--ink);color:var(--gold-light);display:flex;align-items:center;justify-content:center;font-weight:700;
@@ -156,24 +128,24 @@ header.site{
 .step p{color:var(--muted);font-size:.93rem}
 @media(min-width:800px){.steps{grid-template-columns:repeat(4,1fr)}.step{flex-direction:column}}
 
-/* Fitting promise */
-.dark{background:var(--ink);color:#fff}
+/* Fitting */
+.dark{background:var(--ink)}
 .dark h2{color:#fff}
 .dark .lead{color:#c3cbd1}
-.tick-list{list-style:none;margin-top:26px;display:grid;gap:12px}
+.tick-list{list-style:none;margin-top:24px;display:grid;gap:12px}
 .tick-list li{padding-left:32px;position:relative;color:#e2e7ea}
 .tick-list li:before{content:"✓";position:absolute;left:0;top:0;color:var(--gold-light);font-weight:800}
 
 /* Areas */
-.areas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.areas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
 .areas span{background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-size:.9rem;font-weight:600}
 
 /* Contact */
-.contact-grid{display:grid;gap:22px;margin-top:32px}
-.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
+.contact-grid{display:grid;gap:20px;margin-top:30px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
 .card h3{font-size:1.25rem;margin-bottom:8px}
 .card p{color:var(--muted);margin-bottom:16px;font-size:.95rem}
-.phone{display:block;font:700 1.9rem Georgia,serif;color:var(--gold);text-decoration:none;margin-bottom:16px}
+.phone{display:block;font:700 1.7rem Georgia,serif;color:var(--gold);text-decoration:none;margin-bottom:16px}
 label{display:block;font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:6px}
 input,select{
   width:100%;padding:14px;border:1px solid #cfcdc5;border-radius:8px;
@@ -188,7 +160,7 @@ footer strong{color:#fff;font-size:1rem}
 footer p{margin-top:6px}
 footer a{color:var(--gold-light);text-decoration:none}
 
-/* Mobile bar */
+/* Call / WhatsApp bar (phones) */
 .mobile-bar{
   position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--ink);
   display:flex;gap:8px;padding:9px 10px calc(9px + env(safe-area-inset-bottom));
@@ -198,47 +170,7 @@ footer a{color:var(--gold-light);text-decoration:none}
 .mobile-bar .wa{background:#fff;color:var(--ink)}
 @media(min-width:900px){.mobile-bar{display:none}body{padding-bottom:0}}
 
-/* Cleaner placeholders + gold accent */
-.product .img{background-size:cover;background-position:center}
-h2:after{content:"";display:block;width:48px;height:3px;background:var(--gold);margin-top:12px;border-radius:2px}
-.center h2:after,.dark h2:after{margin-left:auto;margin-right:auto}
-.dark h2:after{margin-left:0}
-
-/* Phone-friendly layout */
-@media(max-width:899px){
-  section{padding:46px 0}
-  .hero{padding:52px 0 44px}
-  .hero p{font-size:1rem}
-  .nav.open{max-height:calc(100vh - 64px - env(safe-area-inset-top));overflow-y:auto}
-  .nav a{padding:17px 0;font-size:1.02rem}
-  .features{gap:10px}
-  .feat{padding:18px 12px}
-
-  /* swipeable product cards instead of long vertical scroll */
-  .products{
-    display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;
-    margin-left:-22px;margin-right:-22px;padding:4px 22px 14px;
-    scrollbar-width:none;-webkit-overflow-scrolling:touch;
-  }
-  .products::-webkit-scrollbar{display:none}
-  .product{flex:0 0 80%;scroll-snap-align:center}
-  .product .img{aspect-ratio:3/2}
-  .product .body{padding:18px}
-  .product a.more{padding:8px 0}
-
-  .steps{gap:10px}
-  .step{padding:16px}
-  .areas span{padding:10px 14px}
-  .card{padding:22px}
-  .phone{font-size:1.7rem}
-  .tick-list li{font-size:.98rem}
-}
-@media(max-width:380px){
-  .wrap{padding:0 16px}
-  .products{margin-left:-16px;margin-right:-16px;padding-left:16px;padding-right:16px}
-  .brand{font-size:1.15rem}
-}
-
+@media(max-width:380px){.wrap{padding:0 16px}.brand{font-size:1.15rem}}
 :focus-visible{outline:3px solid var(--gold-light);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -285,7 +217,7 @@ h2:after{content:"";display:block;width:48px;height:3px;background:var(--gold);m
 </div>
 
 <!-- FEATURES -->
-<section style="padding:44px 0">
+<section style="padding:40px 0">
   <div class="wrap">
     <div class="features">
       <div class="feat"><svg viewBox="0 0 24 24"><path d="M3 10h18M5 10V21h14V10M4 10l2-5h12l2 5M9 21v-7h6v7"/></svg><h3>Complete projects</h3><p>Products for kitchens, interiors and exteriors</p></div>
@@ -302,64 +234,64 @@ h2:after{content:"";display:block;width:48px;height:3px;background:var(--gold);m
     <h2>Kitchens</h2>
     <p class="lead">From a complete new kitchen to a simple refresh, we can help you choose units, doors, worktops, storage and finishing touches — then install it properly.</p>
     <div class="products">
-      <article class="product"><div class="img" data-img="/img/kitchen ranges.jpg">Kitchen photo</div><div class="body"><h3>Kitchen ranges</h3><p>Modern, traditional and handleless styles with a wide choice of colours and finishes.</p><a class="more" href="#contact">Plan a kitchen</a></div></article>
-      <article class="product"><div class="img" data-img="img/woktop finishing.jpg">Worktop photo</div><div class="body"><h3>Worktops & finishing</h3><p>Laminate, solid wood and premium surface options, plus sinks, taps, handles and splashbacks.</p><a class="more" href="#contact">Ask about worktops</a></div></article>
-      <article class="product"><div class="img" data-img="img/appliances.jpg">Appliance photo</div><div class="body"><h3>Appliances</h3><p>Cooking, cooling and cleaning appliances to complete your kitchen project.</p><a class="more" href="#contact">Ask about appliances</a></div></article>
+      <article class="product"><div class="img">Kitchen photo<img src="img/kitchen%20ranges.jpg" alt="Kitchen ranges" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Kitchen ranges</h3><p>Modern, traditional and handleless styles with a wide choice of colours and finishes.</p><a class="more" href="#contact">Plan a kitchen</a></div></article>
+      <article class="product"><div class="img">Worktop photo<img src="img/woktop%20finishing.jpg" alt="Worktops and finishing" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Worktops &amp; finishing</h3><p>Laminate, solid wood and premium surface options, plus sinks, taps, handles and splashbacks.</p><a class="more" href="#contact">Ask about worktops</a></div></article>
+      <article class="product"><div class="img">Appliance photo<img src="img/appliances.jpg" alt="Appliances" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Appliances</h3><p>Cooking, cooling and cleaning appliances to complete your kitchen project.</p><a class="more" href="#contact">Ask about appliances</a></div></article>
     </div>
   </div>
 </section>
 
 <!-- DOORS -->
-<section id="doors" class="soft">
+<section id="doors">
   <div class="wrap">
     <h2>Doors</h2>
     <p class="lead">Internal and external doors for new projects, renovations and individual replacements. We supply the right style and fit it neatly.</p>
     <div class="products">
-      <article class="product"><div class="img" data-img="img/composit door.jpg">Composite door photo</div><div class="body"><h3>Composite & entrance doors</h3><p>Secure, attractive front doors in a wide range of styles, colours, glass and hardware.</p><a class="more" href="#contact">Ask about entrance doors</a></div></article>
-      <article class="product"><div class="img" data-img="img/internal doors.jpg">Internal door photo</div><div class="body"><h3>Internal doors</h3><p>Panel, glazed, contemporary and traditional internal doors, including suitable fire-door options.</p><a class="more" href="#contact">Ask about internal doors</a></div></article>
-      <article class="product"><div class="img" data-img="img/bifold doors.jpg">Bi-fold door photo</div><div class="body"><h3>Bi-fold, patio & French doors</h3><p>Open-plan and garden door solutions with careful installation and a clean finish.</p><a class="more" href="#contact">Ask about patio doors</a></div></article>
-      <article class="product"><div class="img" data-img="img/wordrobe doors.jpg">Sliding door photo</div><div class="body"><h3>Sliding & wardrobe doors</h3><p>Practical sliding systems for rooms, storage and modern interiors.</p><a class="more" href="#contact">Ask about sliding doors</a></div></article>
+      <article class="product"><div class="img">Composite door photo<img src="img/composit%20door.jpg" alt="Composite door" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Composite &amp; entrance doors</h3><p>Secure, attractive front doors in a wide range of styles, colours, glass and hardware.</p><a class="more" href="#contact">Ask about entrance doors</a></div></article>
+      <article class="product"><div class="img">Internal door photo<img src="img/internal%20doors.jpg" alt="Internal doors" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Internal doors</h3><p>Panel, glazed, contemporary and traditional internal doors, including suitable fire-door options.</p><a class="more" href="#contact">Ask about internal doors</a></div></article>
+      <article class="product"><div class="img">Bi-fold door photo<img src="img/bifold%20doors.jpg" alt="Bi-fold doors" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Bi-fold, patio &amp; French doors</h3><p>Open-plan and garden door solutions with careful installation and a clean finish.</p><a class="more" href="#contact">Ask about patio doors</a></div></article>
+      <article class="product"><div class="img">Sliding door photo<img src="img/wordrobe%20doors.jpg" alt="Sliding and wardrobe doors" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Sliding &amp; wardrobe doors</h3><p>Practical sliding systems for rooms, storage and modern interiors.</p><a class="more" href="#contact">Ask about sliding doors</a></div></article>
     </div>
   </div>
 </section>
 
 <!-- WINDOWS -->
-<section id="windows">
+<section id="windows" class="soft">
   <div class="wrap">
     <h2>Windows</h2>
     <p class="lead">Replacement and new windows fitted accurately, with attention to the surrounding finish and a tidy handover.</p>
     <div class="products">
-      <article class="product"><div class="img" data-img="img/casement windows.jpg">Casement window photo</div><div class="body"><h3>Casement windows</h3><p>A practical classic for replacement and new installations.</p><a class="more" href="#contact">Ask about windows</a></div></article>
-      <article class="product"><div class="img" data-img="img/bay windows.jpg">Bay & bow window photo</div><div class="body"><h3>Bay & bow windows</h3><p>Careful fitting for larger and more detailed window openings.</p><a class="more" href="#contact">Ask about bay windows</a></div></article>
-      <article class="product"><div class="img" data-img="img/replacement windows.jpg">Replacement window photo</div><div class="body"><h3>Replacement windows</h3><p>Clean removal, accurate installation and a neat finished frame.</p><a class="more" href="#contact">Get a window quote</a></div></article>
+      <article class="product"><div class="img">Casement window photo<img src="img/casement%20windows.jpg" alt="Casement windows" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Casement windows</h3><p>A practical classic for replacement and new installations.</p><a class="more" href="#contact">Ask about windows</a></div></article>
+      <article class="product"><div class="img">Bay &amp; bow window photo<img src="img/bay%20windows.jpg" alt="Bay and bow windows" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Bay &amp; bow windows</h3><p>Careful fitting for larger and more detailed window openings.</p><a class="more" href="#contact">Ask about bay windows</a></div></article>
+      <article class="product"><div class="img">Replacement window photo<img src="img/replacement%20windows.jpg" alt="Replacement windows" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Replacement windows</h3><p>Clean removal, accurate installation and a neat finished frame.</p><a class="more" href="#contact">Get a window quote</a></div></article>
     </div>
   </div>
 </section>
 
 <!-- INTERIORS -->
-<section id="interiors" class="soft">
+<section id="interiors">
   <div class="wrap">
     <h2>More for your home</h2>
     <p class="lead">We can supply and fit a wide range of products for complete home-improvement projects.</p>
     <div class="products">
-      <article class="product"><div class="img" data-img="img/Bathroom furniture.jpg">Bathroom photo</div><div class="body"><h3>Bathrooms</h3><p>Bathroom furniture, storage, worktops, flooring and finishing products for a complete room.</p><a class="more" href="#contact">Discuss a bathroom</a></div></article>
-      <article class="product"><div class="img" data-img="img/bedroom.jpg">Bedroom photo</div><div class="body"><h3>Bedrooms & storage</h3><p>Bedroom furniture, fitted storage, wardrobe doors and practical storage solutions.</p><a class="more" href="#contact">Discuss storage</a></div></article>
-      <article class="product"><div class="img" data-img="img/flooring.jpg">Flooring photo</div><div class="body"><h3>Flooring</h3><p>Laminate, engineered wood, vinyl and other flooring options for kitchens and living spaces.</p><a class="more" href="#contact">Ask about flooring</a></div></article>
-      <article class="product"><div class="img" data-img="img/joinery.jpg">Joinery photo</div><div class="body"><h3>Joinery & finishing</h3><p>Skirting, architrave, stair parts, door furniture, mouldings and other finishing products.</p><a class="more" href="#contact">Ask about joinery</a></div></article>
-      <article class="product"><div class="img" data-img="img/utility.jpeg">Utility room photo</div><div class="body"><h3>Utility rooms</h3><p>Cabinetry, worktops, storage and practical fittings to make the most of your utility space.</p><a class="more" href="#contact">Plan a utility room</a></div></article>
-      <article class="product"><div class="img" data-img="img/hardware.jpg">Hardware photo</div><div class="body"><h3>Hardware & accessories</h3><p>Handles, hinges, locks, fittings and the finishing details that complete a project.</p><a class="more" href="#contact">Ask about hardware</a></div></article>
+      <article class="product"><div class="img">Bathroom photo<img src="img/Bathroom%20furniture.jpg" alt="Bathrooms" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Bathrooms</h3><p>Bathroom furniture, storage, worktops, flooring and finishing products for a complete room.</p><a class="more" href="#contact">Discuss a bathroom</a></div></article>
+      <article class="product"><div class="img">Bedroom photo<img src="img/bedroom.jpg" alt="Bedrooms and storage" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Bedrooms &amp; storage</h3><p>Bedroom furniture, fitted storage, wardrobe doors and practical storage solutions.</p><a class="more" href="#contact">Discuss storage</a></div></article>
+      <article class="product"><div class="img">Flooring photo<img src="img/flooring.jpg" alt="Flooring" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Flooring</h3><p>Laminate, engineered wood, vinyl and other flooring options for kitchens and living spaces.</p><a class="more" href="#contact">Ask about flooring</a></div></article>
+      <article class="product"><div class="img">Joinery photo<img src="img/joinery.jpg" alt="Joinery and finishing" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Joinery &amp; finishing</h3><p>Skirting, architrave, stair parts, door furniture, mouldings and other finishing products.</p><a class="more" href="#contact">Ask about joinery</a></div></article>
+      <article class="product"><div class="img">Utility room photo<img src="img/utility.jpeg" alt="Utility rooms" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Utility rooms</h3><p>Cabinetry, worktops, storage and practical fittings to make the most of your utility space.</p><a class="more" href="#contact">Plan a utility room</a></div></article>
+      <article class="product"><div class="img">Hardware photo<img src="img/hardware.jpg" alt="Hardware and accessories" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Hardware &amp; accessories</h3><p>Handles, hinges, locks, fittings and the finishing details that complete a project.</p><a class="more" href="#contact">Ask about hardware</a></div></article>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->s
-<section>
+<!-- HOW IT WORKS -->
+<section class="soft">
   <div class="wrap">
     <h2>Simple from idea to finished room</h2>
     <div class="steps">
       <div class="step"><div><h3>Get in touch</h3><p>Call or message us with your project.</p></div></div>
       <div class="step"><div><h3>Choose your products</h3><p>Choose your style, colours, finishes, fittings and accessories.</p></div></div>
-      <div class="step"><div><h3>We supply & fit</h3><p>Products are ordered for your project and installed professionally.</p></div></div>
+      <div class="step"><div><h3>We supply &amp; fit</h3><p>Products are ordered for your project and installed professionally.</p></div></div>
       <div class="step"><div><h3>Clean handover</h3><p>We protect the work area, remove installation waste and check the finished work with you.</p></div></div>
     </div>
   </div>
@@ -380,20 +312,19 @@ h2:after{content:"";display:block;width:48px;height:3px;background:var(--gold);m
   </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- REVIEWS: hidden until you have the real Google reviews link.
+     Replace PASTE_YOUR_GOOGLE_REVIEWS_LINK_HERE, then delete the comment markers around this block.
 <section>
   <div class="wrap center">
     <h2>What our customers say</h2>
     <p class="lead">Read honest reviews from customers we have supplied and fitted for.</p>
-    <a class="btn btn-gold" style="margin-top:22px"
-       href="LINK_GOOGLE_REVIEWS" target="_blank" rel="noopener">
-      ★ Read our Google reviews
-    </a>
+    <a class="btn btn-gold" style="margin-top:22px" href="PASTE_YOUR_GOOGLE_REVIEWS_LINK_HERE" target="_blank" rel="noopener">★ Read our Google reviews</a>
   </div>
 </section>
+-->
 
 <!-- AREAS -->
-<section class="soft center">
+<section class="center">
   <div class="wrap">
     <h2>Serving Rugby &amp; surrounding areas</h2>
     <p class="lead">Supply and fitting for kitchens, doors, windows and home improvements across Rugby, Warwickshire and selected nearby areas.</p>
@@ -405,7 +336,7 @@ h2:after{content:"";display:block;width:48px;height:3px;background:var(--gold);m
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="soft">
   <div class="wrap">
     <h2>Tell us what you are planning</h2>
     <p class="lead">Kitchen, door, window, flooring, bathroom, bedroom or another home-improvement project? Send us the details and photos and we will discuss the options.</p>
@@ -423,10 +354,12 @@ h2:after{content:"";display:block;width:48px;height:3px;background:var(--gold);m
         <p>Fill in two details and we'll open WhatsApp for you.</p>
         <label for="what">What do you need?</label>
         <select id="what">
+          <option>Kitchen</option>
           <option>Composite door</option>
           <option>Bi-fold doors</option>
           <option>Patio / French doors</option>
           <option>Windows</option>
+          <option>Flooring</option>
           <option>Not sure yet</option>
         </select>
         <label for="town">Your town or postcode</label>
@@ -463,14 +396,6 @@ h2:after{content:"";display:block;width:48px;height:3px;background:var(--gold);m
   });
   nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
 })();
-
-/* Photos: use a photo only if the file exists, otherwise keep the placeholder */
-document.querySelectorAll('[data-img]').forEach(function(el){
-  var src=el.getAttribute('data-img'), im=new Image();
-  im.onload=function(){el.style.backgroundImage="url('"+src+"')";el.textContent='';};
-  im.src=src;
-});
-
 
 /* WhatsApp quote button */
 document.getElementById('sendWa').addEventListener('click',function(){

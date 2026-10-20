@@ -144,6 +144,16 @@ header.site{
 @media(min-width:960px){.products{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:599px){.product .body{padding:17px}.product .img{aspect-ratio:5/3}}
 
+/* Catalogue */
+.catalogue{background:var(--ink);color:#fff;border-radius:14px;padding:30px 24px;display:grid;gap:22px;align-items:center}
+.catalogue h2{color:#fff;margin-bottom:10px}
+.catalogue p{color:#dfe4e8;max-width:560px}
+.catalogue ul{list-style:none;margin:16px 0 0;display:grid;gap:8px}
+.catalogue li{padding-left:28px;position:relative;color:#e2e7ea;font-size:.95rem}
+.catalogue li:before{content:"✓";position:absolute;left:0;color:var(--gold-light);font-weight:800}
+.catalogue .btns{display:flex;flex-direction:column;gap:12px}
+@media(min-width:800px){.catalogue{grid-template-columns:1.5fr 1fr;padding:44px 40px}}
+
 /* Steps */
 .steps{display:grid;gap:12px;margin-top:30px;counter-reset:s}
 .step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px}
@@ -221,7 +231,7 @@ footer a{color:var(--gold-light);text-decoration:none}
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav" aria-label="Main">
-        <a href="#kitchens">Kitchens</a><a href="#doors">Doors</a><a href="#windows">Windows</a><a href="#interiors">Interiors</a><a href="#fitting">Fitting</a>
+        <a href="#catalogue">Catalogue</a><a href="#kitchens">Kitchens</a><a href="#doors">Doors</a><a href="#windows">Windows</a><a href="#interiors">Interiors</a><a href="#fitting">Fitting</a>
         <a href="#contact">Contact</a>
         <a class="btn btn-gold" href="#contact">Get a quote</a>
       </nav>
@@ -235,7 +245,7 @@ footer a{color:var(--gold-light);text-decoration:none}
 <div class="hero">
   <div class="wrap">
     <h1>Everything for your home. Supplied and fitted properly.</h1>
-    <p>Kitchens, doors, windows, flooring, bathrooms, bedrooms, joinery and more — supplied for your project and fitted by Pro APEX with 10 years of hands-on installation experience.</p>
+    <p>Kitchens, doors, windows, flooring, bathrooms, bedrooms, joinery and more — supplied for your project and fitted by Pro APEX with 10 years of hands-on installation experience. Photos on this page are for inspiration; we present our full catalogue when we discuss your project.</p>
     <div class="btns">
       <a class="btn btn-gold" href="#contact">Get a quote</a>
       <a class="btn btn-outline" href="tel:+447775877746">Call 07775 877 746</a>
@@ -252,6 +262,27 @@ footer a{color:var(--gold-light);text-decoration:none}
       <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><circle cx="15.5" cy="12" r=".8"/></svg><h3>Wide choice</h3><p>Styles, colours, finishes and options</p></div>
       <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4-1L19 8l-3-3L5 16z"/><path d="M14 7l3 3"/></svg><h3>Professional fitting</h3><p>10 years’ hands-on installation experience</p></div>
       <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><h3>Clean finish</h3><p>Protected work area and tidy handover</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATALOGUE -->
+<section id="catalogue" style="padding:20px 0 56px">
+  <div class="wrap">
+    <div class="catalogue">
+      <div>
+        <h2>Photos for ideas. Full catalogue for your project.</h2>
+        <p>The photos on this page are for guidance only, to give you an idea of the styles available. When we discuss your project in detail, we present our full catalogue and go through every option with you.</p>
+        <ul>
+          <li>Use the photos here to get ideas and see what you like</li>
+          <li>We present the full catalogue when we discuss your project</li>
+          <li>Together we choose the styles, colours and finishes that suit you</li>
+        </ul>
+      </div>
+      <div class="btns">
+        <a class="btn btn-gold" href="https://wa.me/447775877746?text=Hello%20Pro%20APEX%2C%20I%27d%20like%20to%20discuss%20my%20project%20and%20see%20your%20catalogue." target="_blank" rel="noopener">Discuss your project</a>
+        <a class="btn btn-outline" href="tel:+447775877746">Call 07775 877 746</a>
+      </div>
     </div>
   </div>
 </section>
@@ -318,7 +349,7 @@ footer a{color:var(--gold-light);text-decoration:none}
     <h2>Simple from idea to finished room</h2>
     <div class="steps">
       <div class="step"><div><h3>Get in touch</h3><p>Call or message us with your project.</p></div></div>
-      <div class="step"><div><h3>Choose your products</h3><p>Choose your style, colours, finishes, fittings and accessories.</p></div></div>
+      <div class="step"><div><h3>Choose your products</h3><p>We show you our full catalogue and you choose your style, colours, finishes, fittings and accessories.</p></div></div>
       <div class="step"><div><h3>We supply &amp; fit</h3><p>Products are ordered for your project and installed professionally.</p></div></div>
       <div class="step"><div><h3>Clean handover</h3><p>We protect the work area, remove installation waste and check the finished work with you.</p></div></div>
     </div>

@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <meta name="theme-color" content="#111b24">
+  <meta name="description" content="Inox Craft UK provides stainless steel TIG welding, repairs and bespoke fabrication for commercial kitchens, restaurants, care homes and businesses across the UK by appointment.">
+  <title>Inox Craft UK | Stainless Steel Fabrication & Welding</title>
+  <style>
+    :root{--ink:#13202a;--ink2:#1b2c38;--gold:#d8b66a;--paper:#f5f6f4;--white:#fff;--muted:#aebbc4;--line:#dce2e4;--max:1160px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:82px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit} img{display:block;width:100%;height:100%;object-fit:cover}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .topbar{background:#0c141b;color:#dce4e8;font-size:.88rem;padding:9px 0}
+    .topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:10;background:rgba(19,32,42,.97);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid #ffffff16}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;letter-spacing:.045em;font-size:1.12rem}
+    .brand-mark{display:grid;place-items:center;width:43px;height:43px;border:1px solid var(--gold);color:var(--gold);font-weight:900;letter-spacing:-.08em}
+    .brand small{display:block;font-size:.66rem;font-weight:600;letter-spacing:.19em;color:#aebbc4;margin-top:-2px}
+    nav{display:flex;align-items:center;gap:25px}
+    nav a{text-decoration:none;font-size:.92rem;color:#e0e7eb}
+    nav a:hover{color:var(--gold)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:750;border:1px solid transparent;padding:13px 19px;min-height:48px;border-radius:3px;transition:.2s}
+    .nav-cta,.btn-gold{background:var(--gold);color:#111b24}
+    .nav-cta:hover,.btn-gold:hover{background:#e8cc89;transform:translateY(-1px)}
+    .btn-outline{border-color:#71818b;color:white;background:transparent}
+    .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+    .hero{background:var(--ink);color:white;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;min-height:590px;align-items:stretch}
+    .hero-copy{padding:76px 42px 76px max(20px,calc((100vw - var(--max))/2));padding-right:42px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+    .eyebrow{display:flex;align-items:center;gap:11px;color:var(--gold);text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;font-weight:800}
+    .eyebrow:before{content:"";width:30px;height:2px;background:var(--gold)}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(2.65rem,5.2vw,4.7rem);line-height:1.04;letter-spacing:-.045em;margin:22px 0}
+    h1 span{color:var(--gold)}
+    .hero-copy>p{color:#c4cfd5;max-width:570px;font-size:1.08rem}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .hero-note{margin-top:27px;color:#aebbc4;font-size:.88rem}
+    .hero-photo{position:relative;min-height:450px}
+    .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,transparent 36%),linear-gradient(0deg,#101a22a8,transparent 45%)}
+    .photo-label{position:absolute;z-index:1;bottom:25px;right:25px;background:#101a22df;border:1px solid #ffffff2e;padding:12px 16px;font-size:.82rem;color:#fff}
+    .photo-label strong{display:block;color:var(--gold);font-size:.95rem}
+    .trustbar{background:#fff;border-bottom:1px solid var(--line)}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+    .trust-item{padding:22px 24px;display:flex;gap:13px;align-items:center;border-right:1px solid var(--line)}
+    .trust-item:first-child{border-left:1px solid var(--line)}
+    .trust-icon{font-size:1.3rem;color:#a47b2c}
+    .trust-item strong{display:block;font-size:.94rem}
+    .trust-item span{display:block;font-size:.82rem;color:#63717a}
+    section{padding:86px 0}
+    .section-head{max-width:720px;margin-bottom:35px}
+    .section-head h2{font-size:clamp(2rem,3.8vw,3.1rem);line-height:1.12;letter-spacing:-.035em;margin:15px 0}
+    .section-head p{color:#5c6971;margin-bottom:0;font-size:1.02rem}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:white;border:1px solid var(--line);padding:27px;min-height:220px}
+    .service .num{font-size:.78rem;letter-spacing:.12em;color:#a47b2c;font-weight:800}
+    .service h3{font-size:1.2rem;margin:16px 0 9px}
+    .service p{color:#617079;font-size:.94rem;margin:0}
+    .service-icon{font-size:1.55rem;margin-top:17px}
+    .dark-section{background:var(--ink);color:white}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .split .section-head{margin-bottom:0}
+    .dark-section .section-head p{color:#bac6cc}
+    .check-list{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:15px}
+    .check-list li{display:flex;gap:12px;color:#e1e7ea}
+    .check-list li:before{content:"✓";display:grid;place-items:center;flex:0 0 24px;height:24px;background:#d8b66a20;color:var(--gold);font-weight:900;border-radius:50%}
+    .feature-photo{height:450px;position:relative}
+    .feature-photo img{border:1px solid #ffffff22}
+    .feature-caption{position:absolute;bottom:18px;left:18px;background:#111b24e8;padding:13px 16px;font-size:.84rem}
+    .feature-caption strong{display:block;color:var(--gold)}
+    .gallery{display:grid;grid-template-columns:1.15fr 1fr 1fr;grid-template-rows:230px 190px;gap:14px}
+    .gallery figure{margin:0;position:relative;overflow:hidden;background:#d8dee1}
+    .gallery figure:first-child{grid-row:span 2}
+    .gallery figure img{transition:transform .4s}
+    .gallery figure:hover img{transform:scale(1.04)}
+    .gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:30px 15px 13px;background:linear-gradient(transparent,#0c141be8);color:white;font-size:.9rem;font-weight:700}
+    .example-note{font-size:.83rem;color:#65737b;margin-top:14px}
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:35px}
+    .process{border-top:2px solid var(--gold);padding-top:20px}
+    .process .step{font-size:.75rem;letter-spacing:.13em;color:#a47b2c;font-weight:800}
+    .process h3{margin:9px 0;font-size:1.15rem}
+    .process p{font-size:.93rem;color:#65737b;margin:0}
+    .cta-band{background:#e9e4d7;padding:56px 0}
+    .cta-row{display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .cta-row h2{font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.15;margin:0 0 8px}
+    .cta-row p{margin:0;color:#59656c}
+    .cta-row .btn{flex-shrink:0}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px}
+    .contact-details{display:grid;gap:17px;margin-top:27px}
+    .contact-line{display:flex;gap:13px;align-items:flex-start}
+    .contact-line .symbol{color:#a47b2c;font-size:1.2rem}
+    .contact-line strong{display:block}
+    .contact-line span{color:#68757d;font-size:.92rem}
+    .contact-form{background:white;border:1px solid var(--line);padding:28px}
+    .field{margin-bottom:16px}
+    label{display:block;font-size:.88rem;font-weight:750;margin-bottom:7px}
+    input,select,textarea{font:inherit;width:100%;border:1px solid #cbd4d8;border-radius:3px;padding:12px 13px;background:#fff;color:var(--ink)}
+    input:focus,select:focus,textarea:focus{outline:2px solid #d8b66a;outline-offset:1px}
+    textarea{min-height:115px;resize:vertical}
+    .form-hint{font-size:.8rem;color:#6b777e;margin:12px 0 0}
+    .contact-form .btn{width:100%;cursor:pointer;font:inherit;font-weight:800}
+    footer{background:#0c141b;color:#c0cbd1;padding:36px 0 22px}
+    .footer-main{display:flex;justify-content:space-between;gap:25px;align-items:flex-start;padding-bottom:25px}
+    footer .brand{color:white}
+    footer p{font-size:.87rem;max-width:440px;margin:12px 0 0;color:#9eabb2}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+    .footer-links a{font-size:.88rem;text-decoration:none}
+    .footer-bottom{border-top:1px solid #ffffff1c;padding-top:17px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:.79rem;color:#89979f}
+
+    html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+    body{overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+    .nav-right{display:none;align-items:center;gap:10px}
+    .menu-btn{display:grid;place-items:center;width:46px;height:46px;border:1px solid #ffffff3a;background:transparent;color:#fff;border-radius:3px;cursor:pointer;padding:0}
+    .menu-btn svg{width:22px;height:22px}
+    .menu-btn .x{display:none}
+    .menu-btn[aria-expanded=true] .bars{display:none}
+    .menu-btn[aria-expanded=true] .x{display:block}
+    .btn-wa{background:#25d366;color:#07210f}
+    .btn-wa:hover{background:#4be083}
+    .btn-outline-dark{border-color:#71818b;color:#fff;background:transparent}
+    .mobile-bar{display:none}
+    .swipe-hint{display:none}
+    @media(hover:none){.gallery figure:hover img{transform:none}.btn:hover{transform:none}}
+    @media(max-width:850px){
+      html{scroll-padding-top:68px}
+      .topbar{display:none}
+      .wrap{width:min(100% - 32px,var(--max))}
+      .nav{min-height:64px;position:relative}
+      .nav-right{display:flex}
+      nav{display:none;position:absolute;top:100%;left:-16px;right:-16px;background:#13202a;border-top:1px solid #ffffff18;border-bottom:1px solid #ffffff22;flex-direction:column;align-items:stretch;gap:0;padding:6px 16px 12px;box-shadow:0 18px 30px #0006}
+      nav.open{display:flex}
+      nav a:not(.nav-cta){display:flex;align-items:center;min-height:54px;font-size:1.05rem;border-bottom:1px solid #ffffff12}
+      nav .nav-cta{display:none}
+      .hero-grid{grid-template-columns:1fr;min-height:0}
+      .hero-photo{grid-row:1;min-height:0;height:210px}
+      .hero-photo img{object-position:center 35%}
+      .hero-photo:after{background:linear-gradient(0deg,var(--ink),transparent 60%)}
+      .photo-label{display:none}
+      .hero-copy{padding:26px 20px 40px}
+      h1{font-size:clamp(2.2rem,10.5vw,3.2rem);margin:16px 0 14px}
+      .hero-copy>p{font-size:1rem;margin-bottom:0}
+      .hero-actions{width:100%;flex-direction:column;gap:10px;margin-top:22px}
+      .hero-actions .btn{width:100%}
+      .hero-note{margin-top:18px;font-size:.82rem}
+      .trust-grid{grid-template-columns:1fr}
+      .trust-item,.trust-item:first-child{border:0;border-bottom:1px solid var(--line);padding:13px 2px}
+      .trust-item:last-child{border-bottom:0}
+      .trust-item span:not(.trust-icon){display:none}
+      section{padding:52px 0}
+      .section-head{margin-bottom:26px}
+      .section-head h2{font-size:1.8rem}
+      .services-grid{grid-template-columns:1fr;gap:12px}
+      .service{min-height:0;padding:20px;display:grid;grid-template-columns:38px 1fr;column-gap:14px;align-items:start}
+      .service-icon{grid-column:1;grid-row:1/4;margin:0;font-size:1.5rem;line-height:1.2}
+      .service .num,.service h3,.service p{grid-column:2}
+      .service h3{margin:4px 0 6px;font-size:1.1rem}
+      .split,.contact-grid{grid-template-columns:1fr;gap:30px}
+      .feature-photo{height:250px}
+      .check-list{margin-top:22px}
+      .gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin-inline:-16px;padding:0 16px 6px;scroll-padding-inline:16px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+      .gallery::-webkit-scrollbar{display:none}
+      .gallery figure,.gallery figure:first-child{flex:0 0 82%;height:270px;scroll-snap-align:start;grid-row:auto;grid-column:auto}
+      .swipe-hint{display:block;font-size:.8rem;color:#65737b;margin:10px 0 0;letter-spacing:.04em}
+      .process-grid{grid-template-columns:1fr;gap:22px;margin-top:26px}
+      .cta-band{padding:40px 0}
+      .cta-row{align-items:stretch;flex-direction:column;gap:20px}
+      .cta-row .btn{flex:1 1 100%}
+      .contact-form{padding:20px}
+      input,select,textarea{font-size:16px;padding:14px;min-height:50px}
+      textarea{min-height:130px}
+      .footer-main{flex-direction:column}
+      .footer-bottom{flex-direction:column;gap:6px}
+      body{padding-bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+      .mobile-bar{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:8px;position:fixed;z-index:20;left:0;right:0;bottom:0;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));background:#0c141bf2;backdrop-filter:blur(10px);border-top:1px solid #ffffff1c;transition:transform .25s}
+      .mobile-bar.hide{transform:translateY(110%)}
+      .mobile-bar .btn{padding:10px 6px;font-size:.92rem;gap:5px}
+      header{padding-top:env(safe-area-inset-top,0px)}
+    }
+    @media(max-width:380px){
+      .brand small{display:none}
+      .brand{font-size:.95rem}
+      .gallery figure,.gallery figure:first-child{flex-basis:88%}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Stainless Steel Welding &amp; Fabrication</span>
+      <span>UK-wide service · By appointment</span>
+    </div>
+  </div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Inox Craft UK home">
+        <span class="brand-mark">IC</span>
+        <span>INOX CRAFT <small>UK · STAINLESS STEEL</small></span>
+      </a>
+      <nav id="mainnav" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#sectors">Who we help</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="/index.html">Back to ProApex</a>
+      </nav>
+      <div class="nav-right">
+        <a class="nav-cta" href="tel:+447775877746">&#9742; Call</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav" aria-label="Open menu">
+          <svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" style="padding:0">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Made for your business</div>
+          <h1>Stainless steel.<br><span>Crafted right.</span></h1>
+          <p>TIG stainless steel welding, repairs and bespoke fabrication for commercial kitchens, restaurants, care homes and businesses.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#contact">Request a quote <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="tel:+447775877746">☎ &nbsp;07775 877746</a>
+            <a class="btn btn-wa" href="https://wa.me/447775877746?text=Hello%20Inox%20Craft%20UK%2C%20I%27d%20like%20to%20ask%20about%20a%20stainless%20steel%20project." target="_blank" rel="noopener">WhatsApp us</a>
+          </div>
+          <div class="hero-note">Based around Rugby, Coventry &amp; Warwickshire · UK-wide by prior appointment</div>
+        </div>
+        <div class="hero-photo">
+          <img src="images/hero.jpg" decoding="async" alt="Stainless steel welding by Inox Craft UK" fetchpriority="high">
+          <div class="photo-label"><strong>INOX CRAFT UK</strong>Welding · Repairs · Fabrication</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trustbar">
+      <div class="wrap trust-grid">
+        <div class="trust-item"><span class="trust-icon">◇</span><div><strong>Stainless steel specialists</strong><span>Practical, considered solutions</span></div></div>
+        <div class="trust-item"><span class="trust-icon">⌂</span><div><strong>Commercial kitchens &amp; care settings</strong><span>Made to suit your requirements</span></div></div>
+        <div class="trust-item"><span class="trust-icon">↗</span><div><strong>UK-wide by appointment</strong><span>Discuss your project before booking</span></div></div>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What we do</div>
+          <h2>Practical stainless steel solutions.</h2>
+          <p>From a repair to a made-to-measure item, tell us what you need. We can discuss the best approach, suitable material and finish for your project.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service"><span class="num">01 / WELDING</span><div class="service-icon">✳</div><h3>TIG Stainless Steel Welding</h3><p>Neat, carefully finished welding for suitable stainless steel components and fabrication projects.</p></article>
+          <article class="service"><span class="num">02 / REPAIRS</span><div class="service-icon">⌁</div><h3>Repairs &amp; Alterations</h3><p>Assessment of damaged or loose stainless steel items, with repair options discussed before work begins.</p></article>
+          <article class="service"><span class="num">03 / FABRICATION</span><div class="service-icon">▤</div><h3>Bespoke Fabrication</h3><p>Made-to-measure shelves, work surfaces, frames, brackets and other practical stainless steel items.</p></article>
+          <article class="service"><span class="num">04 / KITCHENS</span><div class="service-icon">♨</div><h3>Commercial Kitchens</h3><p>Stainless steel fixtures and fabrication for restaurants, cafés, caterers and professional kitchens.</p></article>
+          <article class="service"><span class="num">05 / CARE SETTINGS</span><div class="service-icon">＋</div><h3>Care Homes &amp; Nursing Homes</h3><p>Discuss suitable stainless steel fittings, shelves, work areas and repair needs for care environments.</p></article>
+          <article class="service"><span class="num">06 / ADVICE</span><div class="service-icon">◌</div><h3>Material &amp; Finish Advice</h3><p>Help considering stainless steel grade, thickness, cleaning and finish, based on the intended use.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="sectors">
+      <div class="wrap split">
+        <div class="section-head">
+          <div class="eyebrow">Who we work with</div>
+          <h2>Built around your day-to-day needs.</h2>
+          <p>We welcome enquiries from businesses, facilities teams and individuals looking for stainless steel welding, repairs or custom-made items.</p>
+          <ul class="check-list">
+            <li>Restaurants, cafés and commercial kitchens</li>
+            <li>Nursing homes and care-home facilities</li>
+            <li>Caterers, maintenance teams and contractors</li>
+            <li>Businesses and private customers with a suitable project</li>
+          </ul>
+          <div style="margin-top:28px"><a class="btn btn-gold" href="#contact">Tell us about your project ↗</a></div>
+        </div>
+        <div class="feature-photo">
+          <img src="images/project-main.jpg" decoding="async" alt="Stainless steel installation by Inox Craft UK" loading="lazy">
+          <div class="feature-caption"><strong>Designed around your needs</strong>Materials, dimensions and finish discussed with you</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Our work</div>
+          <h2>Recent work.</h2>
+          <p>A selection of stainless steel welding, repair and fabrication work.</p>
+        </div>
+        <div class="gallery">
+          <figure><img src="images/work-1.jpg" decoding="async" alt="Stainless steel welding work" loading="lazy"><figcaption>TIG welding &amp; metalwork</figcaption></figure>
+          <figure><img src="images/work-2.jpg" decoding="async" alt="Commercial kitchen project" loading="lazy"><figcaption>Commercial kitchen</figcaption></figure>
+          <figure><img src="images/work-3.jpg" decoding="async" alt="Stainless steel work surface" loading="lazy"><figcaption>Kitchen work areas</figcaption></figure>
+          <figure><img src="images/work-4.jpg" decoding="async" alt="Workshop fabrication" loading="lazy"><figcaption>Workshop skills</figcaption></figure>
+          <figure><img src="images/work-5.jpg" decoding="async" alt="Fabrication detail" loading="lazy"><figcaption>Fabrication details</figcaption></figure>
+        </div>
+        <p class="swipe-hint">&larr; Swipe to see more &rarr;</p>
+      </div>
+    </section>
+
+    <section style="background:#fff">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">How it works</div>
+          <h2>A straightforward process.</h2>
+        </div>
+        <div class="process-grid">
+          <article class="process"><div class="step">STEP 01</div><h3>Send the details</h3><p>Call or message with a description, measurements, location and clear photos if available.</p></article>
+          <article class="process"><div class="step">STEP 02</div><h3>Discuss the options</h3><p>We discuss suitability, materials, finish, access and whether a site visit is needed.</p></article>
+          <article class="process"><div class="step">STEP 03</div><h3>Agree the quote</h3><p>Work is arranged by prior appointment after scope, price and timing are agreed.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div class="wrap cta-row">
+        <div><h2>Have a stainless steel project?</h2><p>Talk to us about repairs, custom fabrication or a commercial kitchen requirement.</p></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap" class="cta-btns"><a class="btn btn-gold" href="tel:+447775877746">Call 07775 877746</a><a class="btn btn-wa" href="https://wa.me/447775877746?text=Hello%20Inox%20Craft%20UK%2C%20I%27d%20like%20to%20ask%20about%20a%20stainless%20steel%20project." target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+    </div>
+
+    <section id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="section-head">
+            <div class="eyebrow">Get in touch</div>
+            <h2>Let’s talk about what you need.</h2>
+            <p>For a quicker estimate, include the item, approximate dimensions, material if known, your postcode and photos.</p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-line"><span class="symbol">☎</span><div><strong>Call</strong><span><a href="tel:+447775877746">07775 877746</a></span></div></div>
+            <div class="contact-line"><span class="symbol">&#9993;</span><div><strong>WhatsApp</strong><span><a href="https://wa.me/447775877746?text=Hello%20Inox%20Craft%20UK%2C%20I%27d%20like%20to%20ask%20about%20a%20stainless%20steel%20project." target="_blank" rel="noopener">Message us on 07775 877746</a> &mdash; send photos of the job for a quicker quote.</span></div></div>
+            <div class="contact-line"><span class="symbol">⌖</span><div><strong>Coverage</strong><span>Rugby, Coventry &amp; Warwickshire; UK-wide by prior appointment.</span></div></div>
+            <div class="contact-line"><span class="symbol">◷</span><div><strong>Appointments</strong><span>Please contact us to discuss availability and travel.</span></div></div>
+          </div>
+          <p style="margin-top:22px"><a class="btn btn-wa" href="https://wa.me/447775877746?text=Hello%20Inox%20Craft%20UK%2C%20I%27d%20like%20to%20ask%20about%20a%20stainless%20steel%20project." target="_blank" rel="noopener">Chat on WhatsApp &#8599;</a></p>
+        </div>
+        <form class="contact-form" id="quoteForm">
+          <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required placeholder="Name"></div>
+          <div class="field"><label for="business">Business (optional)</label><input id="business" name="business" autocomplete="organization" placeholder="Restaurant, care home or company"></div>
+          <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" inputmode="email" autocapitalize="off" autocomplete="email" required placeholder="you@example.com"></div>
+          <div class="field"><label for="postcode">Project postcode / town *</label><input id="postcode" name="postcode" autocapitalize="characters" autocomplete="postal-code" required placeholder="e.g. Rugby, CV21"></div>
+          <div class="field"><label for="service">What do you need? *</label>
+            <select id="service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>TIG stainless steel welding</option>
+              <option>Repair or alteration</option>
+              <option>Commercial kitchen fabrication</option>
+              <option>Care home / nursing home project</option>
+              <option>Bespoke stainless steel item</option>
+              <option>Material or finish advice</option>
+              <option>Other enquiry</option>
+            </select>
+          </div>
+          <div class="field"><label for="details">Project details *</label><textarea id="details" name="details" required placeholder="Describe the item, approximate dimensions, material and what you need done."></textarea></div>
+          <button class="btn btn-gold" type="submit">Prepare quote enquiry ↗</button>
+          <p class="form-hint">This form opens your email app with the enquiry prepared. It does not send automatically; check the details and press Send in your email app.</p>
+          <p id="formStatus" class="form-hint" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="#home"><span class="brand-mark">IC</span><span>INOX CRAFT <small>UK · STAINLESS STEEL</small></span></a>
+          <p>TIG stainless steel welding, repairs and fabrication. Rugby, Coventry &amp; Warwickshire, with UK-wide work by prior appointment.</p>
+        </div>
+        <div class="footer-links"><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Request a quote</a><a href="tel:+447775877746">07775 877746</a><a href="https://wa.me/447775877746?text=Hello%20Inox%20Craft%20UK%2C%20I%27d%20like%20to%20ask%20about%20a%20stainless%20steel%20project." target="_blank" rel="noopener">WhatsApp</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> Inox Craft UK. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <div class="mobile-bar" id="mobileBar">
+    <a class="btn btn-gold" href="tel:+447775877746" aria-label="Call Inox Craft UK">&#9742; Call</a>
+    <a class="btn btn-wa" href="https://wa.me/447775877746?text=Hello%20Inox%20Craft%20UK%2C%20I%27d%20like%20to%20ask%20about%20a%20stainless%20steel%20project." target="_blank" rel="noopener" aria-label="Message Inox Craft UK on WhatsApp">WhatsApp</a>
+    <a class="btn btn-outline-dark" href="#contact">Quote</a>
+  </div>
+
+  <script>
+
+    (function(){
+      var btn=document.querySelector('.menu-btn'), nav=document.getElementById('mainnav');
+      function setMenu(open){nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
+      btn.addEventListener('click',function(){setMenu(!nav.classList.contains('open'));});
+      nav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+      window.addEventListener('resize',function(){if(window.innerWidth>850)setMenu(false);});
+      var bar=document.getElementById('mobileBar'), contact=document.getElementById('contact');
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(en){bar.classList.toggle('hide',en[0].isIntersecting);},{threshold:0.15}).observe(contact);
+      }
+    })();
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('quoteForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const data = new FormData(this);
+      const subject = encodeURIComponent('Quote enquiry - Inox Craft UK');
+      const body = encodeURIComponent(
+        'Quote enquiry for Inox Craft UK\n\n' +
+        'Name: ' + data.get('name') + '\n' +
+        'Business: ' + (data.get('business') || 'Not provided') + '\n' +
+        'Email: ' + data.get('email') + '\n' +
+        'Project location: ' + data.get('postcode') + '\n' +
+        'Service: ' + data.get('service') + '\n\n' +
+        'Project details:\n' + data.get('details') + '\n'
+      );
+      document.getElementById('formStatus').textContent = 'Your email app should open with the enquiry prepared. Please review it and press Send.';
+      window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pro APEX | Kitchens, Doors, Windows, Flooring &amp; Home Improvements | Rugby</title>
-<meta name="description" content="Pro APEX supplies and fits kitchens, doors, windows, flooring, bathrooms, bedrooms, joinery and home improvement products across Rugby, Coventry, Warwickshire and surrounding areas.">
+<title>Pro APEX | Kitchens, Doors, Windows, Painting &amp; Home Improvements | Rugby</title>
+<meta name="description" content="Pro APEX supplies and fits kitchens, doors, windows, flooring, bathrooms, bedrooms and joinery, and offers low-odour zero-VOC painting with 18th Edition qualified electrical extras across Rugby, Coventry and Warwickshire.">
 <meta name="theme-color" content="#101820">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://proapex.co.uk/">
@@ -12,12 +12,12 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Pro APEX">
 <meta property="og:title" content="Pro APEX | Products Supplied &amp; Professionally Fitted">
-<meta property="og:description" content="Explore kitchens, doors, windows and home-improvement products supplied and fitted by Pro APEX across Rugby and surrounding areas.">
+<meta property="og:description" content="Kitchens, doors, windows, zero-VOC painting and home improvements supplied and fitted by Pro APEX across Rugby and surrounding areas.">
 <meta property="og:url" content="https://proapex.co.uk/">
 <meta property="og:image" content="https://proapex.co.uk/img/hero-door.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Pro APEX","url":"https://proapex.co.uk/","telephone":"+447775877746","image":"https://proapex.co.uk/img/hero-door.jpg","description":"Supply and fitting of kitchens, doors, windows, flooring, bathrooms, bedrooms and joinery.","areaServed":["Rugby","Coventry","Leamington Spa","Daventry","Bedworth","Nuneaton","Warwickshire"]}
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Pro APEX","url":"https://proapex.co.uk/","telephone":"+447775877746","image":"https://proapex.co.uk/img/hero-door.jpg","description":"Supply and fitting of kitchens, doors, windows, flooring, bathrooms, bedrooms and joinery. Professional low-odour zero-VOC painting and decorating, with electrical extras by an 18th Edition qualified electrician.","areaServed":["Rugby","Coventry","Leamington Spa","Daventry","Bedworth","Nuneaton","Warwickshire"]}
 </script>
 
 <style>
@@ -56,10 +56,15 @@ h2:after{content:"";display:block;width:48px;height:3px;background:var(--gold);m
   transition:background .2s ease,color .2s ease,transform .2s ease;
 }
 .btn:active{transform:scale(.98)}
-.btn-gold{background:var(--gold-dark);color:#fff}
-.btn-gold:hover{background:#74511a}
+.btn-gold{background:#1f6feb;color:#fff}
+.btn-gold:hover{background:#1857b8}
 .btn-outline{border-color:rgba(255,255,255,.6);color:#fff}
 .btn-outline:hover{background:#fff;color:var(--ink)}
+.btn-paint{background:#39ff14;color:#101820;font-size:1.25rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:17px 34px;min-height:56px;box-shadow:0 6px 20px rgba(57,255,20,.50);animation:glow 2.6s ease-in-out infinite}
+.btn-paint:hover{background:#6bff4d;color:#101820}
+.nav a.btn.btn-paint{color:#101820;font-size:1.05rem;font-weight:800}
+@media(min-width:900px){.nav a.btn.btn-paint{padding:12px 24px;font-size:1.1rem}}
+@keyframes glow{0%,100%{box-shadow:0 6px 18px rgba(57,255,20,.40)}50%{box-shadow:0 6px 30px rgba(57,255,20,.90)}}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-dark:hover{background:#1d2b38}
 
@@ -138,7 +143,7 @@ header.site{
 .product .body{padding:18px 20px 20px}
 .product h3{font-size:1.25rem;margin-bottom:6px}
 .product p{color:var(--muted);font-size:.95rem}
-.product a.more{display:inline-block;margin-top:10px;padding:6px 0;font-weight:700;color:var(--gold-dark);text-decoration:none}
+.product a.more{display:inline-block;margin-top:10px;padding:6px 0;font-weight:700;color:#1f6feb;text-decoration:none}
 .product a.more:hover{text-decoration:underline}
 @media(min-width:640px){.products{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:960px){.products{grid-template-columns:repeat(3,1fr)}}
@@ -178,12 +183,33 @@ header.site{
 .areas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:24px}
 .areas span{background:#fff;border:1px solid var(--line);padding:9px 16px;border-radius:999px;font-size:.9rem;font-weight:600}
 
+/* Painting */
+.painting{background:linear-gradient(180deg,#fbf8f1,#f3efe4);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.paint-grid{display:grid;gap:22px;margin-top:30px}
+.paint-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px 24px}
+.paint-card h3{font-size:1.35rem;margin-bottom:10px}
+.paint-card p{color:var(--muted);font-size:.97rem;margin-bottom:12px}
+.paint-card .tick-list{margin-top:14px}
+.paint-card .tick-list li{color:var(--text)}
+.paint-card .tick-list li:before{color:var(--gold-dark)}
+.paint-card.elec{background:var(--ink);border-color:var(--ink)}
+.paint-card.elec h3{color:#fff}
+.paint-card.elec p{color:#dfe4e8}
+.paint-card.elec .tick-list li{color:#e2e7ea}
+.paint-card.elec .tick-list li:before{color:var(--gold-light)}
+.paint-card.elec .btn{margin-top:18px;width:100%}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.badges span{background:#fff;border:1px solid #39ff14;color:#15803d;padding:8px 14px;border-radius:999px;font-size:.85rem;font-weight:700}
+.small-print{font-size:.82rem;color:var(--muted);margin-top:16px;line-height:1.5}
+.paint-card.elec .small-print{color:#aeb7be}
+@media(min-width:800px){.paint-grid{grid-template-columns:1.15fr 1fr}}
+
 /* Contact */
 .contact-grid{display:grid;gap:20px;margin-top:30px}
 .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
 .card h3{font-size:1.25rem;margin-bottom:8px}
 .card p{color:var(--muted);margin-bottom:16px;font-size:.95rem}
-.phone{display:block;font:700 1.7rem Georgia,serif;color:var(--gold-dark);text-decoration:none;margin-bottom:16px}
+.phone{display:block;font:700 1.7rem Georgia,serif;color:#1f6feb;text-decoration:none;margin-bottom:16px}
 label{display:block;font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:6px}
 input,select{
   width:100%;padding:14px;border:1px solid #cfcdc5;border-radius:8px;
@@ -204,7 +230,7 @@ footer a{color:var(--gold-light);text-decoration:none}
   display:flex;gap:8px;padding:9px 10px calc(9px + env(safe-area-inset-bottom));
 }
 .mobile-bar a{flex:1;text-align:center;padding:14px 8px;border-radius:6px;font-weight:700;text-decoration:none;font-size:.95rem}
-.mobile-bar .call{background:var(--gold-dark);color:#fff}
+.mobile-bar .call{background:#1f6feb;color:#fff}
 .mobile-bar .wa{background:#fff;color:var(--ink)}
 @media(min-width:900px){.mobile-bar{display:none}body{padding-bottom:0}}
 
@@ -234,7 +260,7 @@ footer a{color:var(--gold-light);text-decoration:none}
       <nav class="nav" id="nav" aria-label="Main">
         <a href="#catalogue">Catalogue</a><a href="#kitchens">Kitchens</a><a href="#doors">Doors</a><a href="#windows">Windows</a><a href="#interiors">Interiors</a><a href="#fitting">Fitting</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn-gold" href="/Inox/index2.html">Stainless Steel Work</a>
+        <a class="btn btn-paint" href="#painting">Painting</a>
       </nav>
     </div>
   </div>
@@ -246,9 +272,9 @@ footer a{color:var(--gold-light);text-decoration:none}
 <div class="hero">
   <div class="wrap">
     <h1>Everything for your home. Supplied and fitted properly.</h1>
-    <p>Kitchens, doors, windows, flooring, bathrooms, bedrooms, joinery and more — supplied for your project and fitted by Pro APEX with 10 years of hands-on installation experience. Photos on this page are for inspiration; we present the full Howdens catalogue when we discuss your project.</p>
+    <p>Kitchens, doors, windows, flooring, bathrooms, bedrooms, joinery, painting and more — supplied for your project and fitted by Pro APEX with 10 years of hands-on installation experience. Photos on this page are for inspiration; we present the full Howdens catalogue when we discuss your project.</p>
     <div class="btns">
-      <a class="btn btn-gold" href="/Inox/index2.html">Stainless Steel Work</a>
+      <a class="btn btn-paint" href="#painting">Painting</a>
       <a class="btn btn-outline" href="tel:+447775877746">Call 07775 877 746</a>
     </div>
     <p class="partner-note">One point of contact from choosing your products to the final clean-up. Product availability and pricing confirmed for your project before ordering.</p>
@@ -397,11 +423,55 @@ footer a{color:var(--gold-light);text-decoration:none}
   </div>
 </section>
 
+<!-- PAINTING -->
+<section id="painting" class="painting">
+  <div class="wrap">
+    <h2>Professional painting. Zero-VOC. No lingering smell.</h2>
+    <p class="lead">Pro APEX are professional painters. We use zero-VOC, water-based paint, so your freshly painted room doesn’t fill with that strong paint smell — and you can use it again sooner.</p>
+
+    <div class="badges">
+      <span>Zero-VOC paint</span>
+      <span>Low odour</span>
+      <span>Winter painting</span>
+      <span>18th Edition electrician</span>
+    </div>
+
+    <div class="paint-grid">
+      <div class="paint-card">
+        <h3>Fresh rooms, without the fumes</h3>
+        <p>Traditional paints can leave a heavy smell for days. Our zero-VOC paint dries with almost no odour, which makes it a considerate choice for families, babies and children, pets, and anyone who is sensitive to strong smells.</p>
+        <p><strong>Perfect for winter, too.</strong> Because there are no harsh fumes to clear, we don’t need to keep every window wide open. Your home stays warmer while we work, so you can refresh your rooms all year round, not just in summer.</p>
+        <ul class="tick-list">
+          <li>Zero-VOC, low-odour, water-based paint</li>
+          <li>Walls, ceilings, woodwork, doors and skirting</li>
+          <li>Careful preparation, filling and sanding</li>
+          <li>Floors and furniture fully protected</li>
+          <li>Clean, sharp finish and tidy handover</li>
+        </ul>
+        <p class="small-print">Zero-VOC paint has very low odour but is not suitable for everyone in every situation. If someone in your home has a medical condition, please speak to your doctor and tell us before we start.</p>
+      </div>
+
+      <div class="paint-card elec">
+        <h3>Painting + electrical extras, in one visit</h3>
+        <p>Pro APEX is run by a UK trained electrician qualified to the <strong>18th Edition (BS 7671)</strong> domestic standard. While we are painting, we can also change the electrical items you’ve been meaning to update, so you don’t need to book a second tradesperson.</p>
+        <ul class="tick-list">
+          <li>Replace sockets and light switches</li>
+          <li>Replace ceiling lights and light fittings</li>
+          <li>Replace and connect appliances</li>
+          <li>Neat, safe work, finished before the final coat</li>
+        </ul>
+        <a class="btn btn-paint" href="https://wa.me/447775877746?text=Hello%20Pro%20APEX%2C%20I%27d%20like%20a%20quote%20for%20painting%20with%20electrical%20extras." target="_blank" rel="noopener">Get a painting quote</a>
+        <p class="small-print">Electrical work in the home must comply with the Building Regulations and BS 7671. Larger or notifiable jobs will be discussed and certified as required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="soft">
   <div class="wrap">
     <h2>Tell us what you are planning</h2>
-    <p class="lead">Kitchen, door, window, flooring, bathroom, bedroom or another home-improvement project? Send us the details and photos and we will discuss the options.</p>
+    <p class="lead">Kitchen, door, window, painting, flooring, bathroom, bedroom or another home-improvement project? Send us the details and photos and we will discuss the options.</p>
 
     <div class="contact-grid">
       <div class="card">
@@ -422,6 +492,8 @@ footer a{color:var(--gold-light);text-decoration:none}
           <option>Bi-fold doors</option>
           <option>Patio / French doors</option>
           <option>Windows</option>
+          <option>Painting (zero-VOC)</option>
+          <option>Painting + electrical extras</option>
           <option>Flooring</option>
           <option>Bathroom</option>
           <option>Bedroom / storage</option>
@@ -440,7 +512,7 @@ footer a{color:var(--gold-light);text-decoration:none}
 
 <footer>
   <strong>Pro APEX</strong>
-  <p>Kitchens · Doors · Windows · Flooring · Joinery · Home Improvements · Rugby · Warwickshire</p>
+  <p>Kitchens · Doors · Windows · Painting · Flooring · Joinery · Home Improvements · Rugby · Warwickshire</p>
   <p>Products supplied from the Howdens range. Pro APEX is an independent company and is not affiliated with Howdens.</p>
   <p>© 2026 Pro APEX. All rights reserved.</p>
   <p><a href="privacy.html">Privacy Policy</a></p>

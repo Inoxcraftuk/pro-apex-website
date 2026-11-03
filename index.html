@@ -46,6 +46,7 @@ header{position:sticky;top:0;z-index:20;background:var(--forest);color:#fff}
 .card:hover img{transform:scale(1.05)}
 .card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 40%,rgba(10,19,15,.85))}
 .card h3{font-size:1.35rem;padding:18px}
+.tag{position:absolute;top:12px;left:12px;background:rgba(255,254,250,.95);color:var(--forest);font-size:.72rem;font-weight:800;padding:6px 11px;border-radius:99px}
 .card.plain{background:var(--forest)}
 .card.plain:after{display:none}
 .card.plain h3{padding:18px}
@@ -112,16 +113,17 @@ footer a{color:#e2c894}
   <section id="services">
     <div class="wrap">
       <h2>What we fit</h2>
-      <p class="note" style="margin:0">Tap what you need and we’ll start your message.</p>
+      <p class="note" style="margin:0">Tap a photo to browse the range on Howdens.</p>
       <div class="grid">
-        <a class="card" href="#contact" data-what="Kitchen"><img src="img/kitchen%20ranges.jpg" alt="" loading="lazy"><h3>Kitchens</h3></a>
-        <a class="card" href="#contact" data-what="Bedroom / storage"><img src="img/bedroom.jpg" alt="" loading="lazy"><h3>Wardrobes & furniture</h3></a>
-        <a class="card" href="#contact" data-what="Doors"><img src="img/composit%20door.jpg" alt="" loading="lazy"><h3>Front doors</h3></a>
-        <a class="card" href="#contact" data-what="Doors"><img src="img/internal%20doors.jpg" alt="" loading="lazy"><h3>Internal doors</h3></a>
-        <a class="card" href="#contact" data-what="Windows"><img src="img/casement%20windows.jpg" alt="" loading="lazy"><h3>Windows</h3></a>
-        <a class="card" href="#contact" data-what="Flooring"><img src="img/flooring.jpg" alt="" loading="lazy"><h3>Flooring</h3></a>
-        <a class="card" href="#contact" data-what="Bathroom"><img src="img/Bathroom%20furniture.jpg" alt="" loading="lazy"><h3>Bathrooms</h3></a>
-        <a class="card plain" href="#contact" data-what="Other"><h3>Anything else?<br>Just ask →</h3></a>
+        <!-- LINKURI: schimbă doar adresa din href="..." la fiecare poză -->
+        <a class="card ext" href="https://www.howdens.com/kitchens/fitted-kitchens" target="_blank" rel="noopener noreferrer"><img src="img/kitchen%20ranges.jpg" alt="Kitchens" loading="lazy"><span class="tag">See on Howdens ↗</span><h3>Kitchens</h3></a>
+        <a class="card ext" href="https://www.howdens.com/bedrooms/fitted-bedrooms" target="_blank" rel="noopener noreferrer"><img src="img/bedroom.jpg" alt="Wardrobes & furniture" loading="lazy"><span class="tag">See on Howdens ↗</span><h3>Wardrobes & furniture</h3></a>
+        <a class="card ext" href="https://www.howdens.com/joinery/doors?sort=price+desc&door_location=External+Internal" target="_blank" rel="noopener noreferrer"><img src="img/composit%20door.jpg" alt="Front doors" loading="lazy"><span class="tag">See on Howdens ↗</span><h3>Front doors</h3></a>
+        <a class="card ext" href="https://www.howdens.com/joinery/doors?door_location=Internal" target="_blank" rel="noopener noreferrer"><img src="img/internal%20doors.jpg" alt="Internal doors" loading="lazy"><span class="tag">See on Howdens ↗</span><h3>Internal doors</h3></a>
+        <a class="card ext" href="https://www.howdens.com" target="_blank" rel="noopener noreferrer"><img src="img/casement%20windows.jpg" alt="Windows" loading="lazy"><span class="tag">See on Howdens ↗</span><h3>Windows</h3></a>
+        <a class="card ext" href="https://www.howdens.com" target="_blank" rel="noopener noreferrer"><img src="img/flooring.jpg" alt="Flooring" loading="lazy"><span class="tag">See on Howdens ↗</span><h3>Flooring</h3></a>
+        <a class="card ext" href="https://www.howdens.com" target="_blank" rel="noopener noreferrer"><img src="img/Bathroom%20furniture.jpg" alt="Bathrooms" loading="lazy"><span class="tag">See on Howdens ↗</span><h3>Bathrooms</h3></a>
+        <a class="card plain" href="#contact"><h3>Anything else?<br>Just ask →</h3></a>
       </div>
       <p class="note">Installation only. You choose and buy the products from any shop; we do the fitting.</p>
     </div>
